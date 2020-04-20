@@ -1,26 +1,24 @@
-title: "Milo"
+title: "La dilettante"
 
-about: "Bootstrap theme for jekyll"
+À propos: "Blog voyage sans ligne éditoriale."
 markdown: kramdown
-#url: ""
-#baseurl: "/"
 disqus_short_name: disqus-demo-page
 
-plugins: 
+plugins:
   - jekyll-paginate
   - jemoji
-  
+
 paginate_path: "/page:num/"
 
 paginate: 5
 
 main_toc:
-  - title: Home
+  - title: Accueil
     url: ""
-  - title: About
-    url: "about"
-  - title: Author
-    url: "author"
+  - title: À propos
+    url: "apropos"
+  - title: Auteur
+    url: "auteur"
 
 defaults:
   -

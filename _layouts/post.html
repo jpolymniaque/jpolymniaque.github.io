@@ -12,11 +12,11 @@
         <div class="col-md-9">
 
           <article class="card mb-4">
-		  
+
             <header class="card-header text-center">
 			{% if page.date %}
               <div class="card-meta">
-                <span>Published on {{ page.date | date_to_string}}</time></span>{% endif %} in
+                <span>Publié le {% include date.html date=page.date %}</time></span>{% endif %} dans
                   {% if post %}
                     {% assign categories = post.categories %}
                   {% else %}
@@ -27,26 +27,26 @@
                   {% unless forloop.last %}&nbsp;{% endunless %}
                   {% endfor %}
               <div>
-			
+
                 <h1 class="card-title">{{ page.title }}</h1>
 
             </header>
-			
+
 			{% if page.image %}
             <a style="cursor:pointer;">
               <img class="card-img" src="{{ site.baseurl }}/img/{{ page.image }}" alt="" />
             </a>
             {% endif %}
-            
+
             <div class="card-body">
 			{{ content }}
             <hr />
 			{% include disqus.html %}
-		<hr />		    
+		<hr />
             </div>
           </article><!-- /.card -->
         </div>
-		{% include sidebar.html %}	
+		{% include sidebar.html %}
       </div>
     </div>
   </main>

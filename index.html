@@ -13,9 +13,9 @@ title: Blog
           <article class="card mb-4">
             <header class="card-header">
               <div class="card-meta">
-                <time>Published on {{ post.date | date_to_string }}</time>
+                <time>Publié le{% include date.html date=post.date %}</time>
                 <span>
-                  in - 
+                  dans -
                   {% if post %}
                     {% assign categories = post.categories %}
                   {% else %}
@@ -40,10 +40,10 @@ title: Blog
             </div>
           </article>
 {% endfor %}
-        </div>  
+        </div>
 		{% include sidebar.html %}
         </div>
-		
+
         </div>
       	{% include pagination.html %}
 		</main>
